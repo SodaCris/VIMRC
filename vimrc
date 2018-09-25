@@ -1,7 +1,7 @@
 set encoding=utf-8  
 set termencoding=utf-8  
-set fileencoding=chinese 
-set fileencodings=ucs-bom,utf-8,chinese
+set fileencoding=utf-8 
+set fileencodings=ucs-bom,utf-8,latin-1
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
