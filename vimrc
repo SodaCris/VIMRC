@@ -7,19 +7,14 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-" Scroll only one line for mouse wheel events to get smooth scrolling on touch screens
+
 map <ScrollWheelUp> <C-Y>
 imap <ScrollWheelUp> <C-X><C-Y>
 map <ScrollWheelDown> <C-E>
 imap <ScrollWheelDown> <C-X><C-E>
 
-" As of version 8, vim enables the mouse by default - but only if no ~/.vimrc
-" is found. Enable that unconditionally for Termux as it's useful with touch:
-set mouse=a
 
-" sensible.vim - Defaults everyone can agree on
-" Maintainer:   Tim Pope <http://tpo.pe/>
-" Version:      1.1
+set mouse=a
 
 set nocompatible
 let g:loaded_sensible = 1
@@ -38,7 +33,7 @@ set ttimeout
 set ttimeoutlen=100
 
 set incsearch
-" Use <C-L> to clear the highlighting of :set hlsearch.
+
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
@@ -84,12 +79,12 @@ if !empty(&viminfo)
 endif
 set sessionoptions-=options
 
-" Allow color schemes to do bright colors without forcing bold.
+
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
 endif
 
-" Load matchit.vim, but only if the user hasn't installed a newer version.
+
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
