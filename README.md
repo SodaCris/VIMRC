@@ -1,2 +1,2 @@
 # VIMRC
-我的vimrc配置文件
+我的vim配置文件
